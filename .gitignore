@@ -26,3 +26,7 @@
 *.exe
 *.out
 *.app
+
+project# Ignore the files and directory that Xcode IDE creates
+xcuserdata/
+project.xcworkspace/
