@@ -62,6 +62,8 @@
 		13493DE32530687A00A89A28 /* SyMacUtil.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13493DE22530687A00A89A28 /* SyMacUtil.mm */; };
 		13493DE6253068F200A89A28 /* SyDefaultDir.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 13493DE4253068F200A89A28 /* SyDefaultDir.cpp */; };
 		13493DE7253068F200A89A28 /* SyDefaultDir.h in Headers */ = {isa = PBXBuildFile; fileRef = 13493DE5253068F200A89A28 /* SyDefaultDir.h */; };
+		13493DE9253088FB00A89A28 /* SyUtilClasses.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 13493DE8253088FA00A89A28 /* SyUtilClasses.cpp */; };
+		13493DEC2530899800A89A28 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13493DEB2530899800A89A28 /* Carbon.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -122,6 +124,8 @@
 		13493DE22530687A00A89A28 /* SyMacUtil.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = SyMacUtil.mm; path = ../../syutil/macos/SyMacUtil.mm; sourceTree = "<group>"; };
 		13493DE4253068F200A89A28 /* SyDefaultDir.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SyDefaultDir.cpp; path = ../../syutil/SyDefaultDir.cpp; sourceTree = "<group>"; };
 		13493DE5253068F200A89A28 /* SyDefaultDir.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SyDefaultDir.h; path = ../../syutil/SyDefaultDir.h; sourceTree = "<group>"; };
+		13493DE8253088FA00A89A28 /* SyUtilClasses.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SyUtilClasses.cpp; path = ../../syutil/SyUtilClasses.cpp; sourceTree = "<group>"; };
+		13493DEB2530899800A89A28 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +133,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13493DEC2530899800A89A28 /* Carbon.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,6 +146,7 @@
 				13493D72253004F500A89A28 /* syutil */,
 				13493D672530044A00A89A28 /* syutil_mac */,
 				13493D662530044A00A89A28 /* Products */,
+				13493DEA2530899800A89A28 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -179,6 +185,7 @@
 				13493DC92530513500A89A28 /* timer.h */,
 				13493DC4253050BF00A89A28 /* SyEventQueueBase.cpp */,
 				13493DC5253050BF00A89A28 /* SyEventQueueBase.h */,
+				13493DE8253088FA00A89A28 /* SyUtilClasses.cpp */,
 				13493DC22530505700A89A28 /* SyUtilClasses.h */,
 				13493DC02530501700A89A28 /* SyReferenceControl.h */,
 				13493DBE25304F9E00A89A28 /* SyUtilTemplates.h */,
@@ -229,6 +236,14 @@
 			);
 			name = macos;
 			path = ../../syutil/macos;
+			sourceTree = "<group>";
+		};
+		13493DEA2530899800A89A28 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				13493DEB2530899800A89A28 /* Carbon.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -361,6 +376,7 @@
 				13493DB82530482600A89A28 /* SyConditionVariable.cpp in Sources */,
 				13493DD92530669300A89A28 /* SyTimeValue.cpp in Sources */,
 				13493DD42530631D00A89A28 /* SystemCapacity.cpp in Sources */,
+				13493DE9253088FB00A89A28 /* SyUtilClasses.cpp in Sources */,
 				13493DA0253032FB00A89A28 /* SyMutex.cpp in Sources */,
 				13493DDD253067C700A89A28 /* SyDebug.cpp in Sources */,
 			);

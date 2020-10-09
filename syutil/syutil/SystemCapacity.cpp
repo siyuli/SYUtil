@@ -339,22 +339,22 @@ VMEType GetVirtualEnvironmentType() {
         return VME_UNKNOWN; // for safety, we consider unknown case as virtual env so that we would keep use dshow first.
     }
     SY_INFO_TRACE("GetVirtualEnvironmentType DeviceString: " << adaptor.DeviceString);
-    cisco_strtouppercase_s(adaptor.DeviceString, sizeof(adaptor.DeviceString));
+    strtouppercase_s(adaptor.DeviceString, sizeof(adaptor.DeviceString));
     char* sub = NULL;
-    if ((cisco_strstr_s(adaptor.DeviceString, sizeof(adaptor.DeviceString), "CITRIX", 6, &sub) == EOK && sub)) {
+    if ((strstr_s(adaptor.DeviceString, sizeof(adaptor.DeviceString), "CITRIX", 6, &sub) == EOK && sub)) {
         eVMEType = VME_CITRIX;
     }
-    else if (cisco_strstr_s(adaptor.DeviceString, sizeof(adaptor.DeviceString), "VMWARE", 6, &sub) == EOK && sub) {
+    else if (strstr_s(adaptor.DeviceString, sizeof(adaptor.DeviceString), "VMWARE", 6, &sub) == EOK && sub) {
         eVMEType = VME_VMWARE;
     }
-    else if (cisco_strstr_s(adaptor.DeviceString, sizeof(adaptor.DeviceString), "VIRTUALBOX", 10, &sub) == EOK && sub) {
+    else if (strstr_s(adaptor.DeviceString, sizeof(adaptor.DeviceString), "VIRTUALBOX", 10, &sub) == EOK && sub) {
         eVMEType = VME_VIRTUALBOX;
     }
-    else if ((cisco_strstr_s(adaptor.DeviceString, sizeof(adaptor.DeviceString), "RDP", 3, &sub) == EOK && sub) ||
-        (cisco_strstr_s(adaptor.DeviceString, sizeof(adaptor.DeviceString), "MICROSOFT REMOTE DISPLAY ADAPTER", 32, &sub) == EOK && sub)) {
+    else if ((strstr_s(adaptor.DeviceString, sizeof(adaptor.DeviceString), "RDP", 3, &sub) == EOK && sub) ||
+        (strstr_s(adaptor.DeviceString, sizeof(adaptor.DeviceString), "MICROSOFT REMOTE DISPLAY ADAPTER", 32, &sub) == EOK && sub)) {
         eVMEType = VME_RDP;
     }
-    else if (cisco_strstr_s(adaptor.DeviceString, sizeof(adaptor.DeviceString), "GRID", 4, &sub) == EOK && sub) {
+    else if (strstr_s(adaptor.DeviceString, sizeof(adaptor.DeviceString), "GRID", 4, &sub) == EOK && sub) {
         eVMEType = VME_UNKNOWN;
     }
     SY_INFO_TRACE("GetVirtualEnvironmentType eVM_TYPE=" << eVMEType);
@@ -1020,7 +1020,7 @@ int get_cpu_brand(char *brand_str, int len)
             // Example output from lscpu:
             // Model name:            Intel(R) Xeon(R) W-2123 CPU @ 3.60GHz
             char *sub = nullptr;
-            if (cisco_strstr_s(ptrBuffer, nread, "Model name:", 11, &sub) == EOK && sub) {
+            if (strstr_s(ptrBuffer, nread, "Model name:", 11, &sub) == EOK && sub) {
                 char *ptr = sub;
                 // move pointer after ':'
                 while (ptr[0] != ':') ptr++;
@@ -1028,7 +1028,7 @@ int get_cpu_brand(char *brand_str, int len)
                 // remove space
                 while (ptr[0] == ' ') ptr++;
 
-                cisco_strcpy_s(brand_str, len, ptr);
+                strcpy_s(brand_str, len, ptr);
                 SY_INFO_TRACE("get_cpu_brand = " << brand_str);
                 break;
             }
@@ -1121,7 +1121,7 @@ int get_cpu_frequency(unsigned int &cpu_frequency)
             // Example output from lscpu:
             // CPU max MHz:           3900.0000
             char *sub = nullptr;
-            if (cisco_strstr_s(ptrBuffer, nread, "CPU max MHz:", 12, &sub) == EOK && sub) {
+            if (strstr_s(ptrBuffer, nread, "CPU max MHz:", 12, &sub) == EOK && sub) {
                 char *ptr = sub;
                 // move pointer after ':'
                 while (ptr[0] != ':') ptr++;
@@ -1159,7 +1159,7 @@ int get_cpu_arch(char *arch_str, int bufLen)
         return -1;
     }
     //SY_INFO_TRACE("get_cpu_arch: " << machbuf);
-    cisco_strcpy_s(arch_str, len, machbuf);
+    strcpy_s(arch_str, len, machbuf);
     return 0;
 }
 #elif AT_IOS
@@ -1188,10 +1188,10 @@ int get_cpu_arch(char *arch_str, int bufLen)
         }
     }
     if (bIsWow64) {
-        cisco_strcpy_s(arch_str, bufLen, "x86_64");
+        strcpy_s(arch_str, bufLen, "x86_64");
     }
     else
-        cisco_strcpy_s(arch_str, bufLen, "x86_32");
+        strcpy_s(arch_str, bufLen, "x86_32");
     return 0;
 }
 #elif AT_ANDROID
@@ -1221,10 +1221,10 @@ int get_cpu_arch(char *arch_str, int bufLen)
     }
 
     if (bHaslm) {
-        cisco_strcpy_s(arch_str, bufLen, "x86_64");
+        strcpy_s(arch_str, bufLen, "x86_64");
     }
     else {
-        cisco_strcpy_s(arch_str, bufLen, "x86_32");
+        strcpy_s(arch_str, bufLen, "x86_32");
     }
     return 0;
 }
@@ -1343,7 +1343,7 @@ int getGpuInfo(std::vector<std::string> &gpuList, std::vector<unsigned int> &mem
             //       vendor: NVIDIA Corporation
             //       clock: 33MHz
             char *subStr = nullptr;
-            if (cisco_strstr_s(ptrBuffer, nread, "product:", 8, &subStr) == EOK && subStr) {
+            if (strstr_s(ptrBuffer, nread, "product:", 8, &subStr) == EOK && subStr) {
                 char *ptr = subStr;
                 // move pointer after ':'
                 while (ptr[0] != ':') ptr++;
@@ -1371,7 +1371,7 @@ int getGpuInfo(std::vector<std::string> &gpuList, std::vector<unsigned int> &mem
             //  Memory at c0000000 (64-bit, prefetchable) [size=256M]
             //  Memory at d0000000 (64-bit, prefetchable) [size=32M]
             char *sizeStr;
-            if (cisco_strstr_s(ptrBuffer, nread, "size=", 5, &sizeStr) == EOK && sizeStr) {
+            if (strstr_s(ptrBuffer, nread, "size=", 5, &sizeStr) == EOK && sizeStr) {
                 char *ptr = sizeStr;
                 // move pointer after '='
                 while (ptr[0] != '=') ptr++;

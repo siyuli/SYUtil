@@ -1828,11 +1828,7 @@ void sy_free_library(SY_HMODULE hmodule)
 
 static const char* file_path_name_keywords[] = {
     "\\appdata",
-    "\\webex",
-    "\\cisco",
     "/application support",
-    "/webex",
-    "/cisco",
 };
 SyResult sy_get_filepath_trace(const char* file_path, char *file_path_trace, size_t buf_size) {
     if (file_path == NULL || file_path_trace == NULL || buf_size <= 0) {

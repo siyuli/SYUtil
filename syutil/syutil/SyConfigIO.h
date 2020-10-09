@@ -23,12 +23,12 @@ SY_OS_EXPORT unsigned short get_uint16_param(char *group, char *item_key);
 SY_OS_EXPORT unsigned long get_uint32_param(char *group, char *item_key);
 SY_OS_EXPORT unsigned char get_bool_param(char *group, char *item_key, unsigned char default_value);
 
-SY_OS_EXPORT void set_webex_home_env(char *home_env);
+SY_OS_EXPORT void set_home_env(char *home_env);
 SY_OS_EXPORT const char *get_process_name();
 SY_OS_EXPORT const char *get_exec_name(void);
 
-SY_OS_EXPORT void set_webex_config_file_name(const CSyString &file);
-SY_OS_EXPORT const char *get_webex_home_dir();
+SY_OS_EXPORT void set_config_file_name(const CSyString &file);
+SY_OS_EXPORT const char *get_home_dir();
 
 SY_OS_EXPORT void enable_config_io_feature(bool bEnable);
 

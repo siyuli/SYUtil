@@ -180,7 +180,7 @@ unsigned long get_string_from_profile(char *app_name, char *key_name,
 
 CSyString g_config_file_name = "sy.cfg";
 
-void set_webex_config_file_name(const CSyString &file)
+void set_config_file_name(const CSyString &file)
 {
     g_config_file_name = file;
 }
@@ -190,7 +190,7 @@ void set_webex_config_file_name(const CSyString &file)
 CSyString g_home_dir_name;
 bool m_bEnableConfigIOFeature = false;
 
-const char *get_webex_home_dir()
+const char *get_home_dir()
 {
     CSyDefaultDir cdir;
     g_home_dir_name = cdir.GetDefaultDir();

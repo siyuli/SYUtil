@@ -16,7 +16,7 @@ USE_UTIL_NS
 
 char g_cur_env[512] = "HOME";
 
-void set_webex_home_env(char *home_env)
+void set_home_env(char *home_env)
 {
     strcpy_forsafe(g_cur_env, home_env, strlen(home_env), sizeof(g_cur_env));
 }
