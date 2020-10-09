@@ -12,8 +12,8 @@ SYTraceLevelDef g_traceMask = SY_TRACE_LEVEL_INFO;
 SYTraceLevelDef g_traceMask_TroubleShootConfig = SY_TRACE_LEVEL_ERROR;
 int32_t m_cpuLoadTroubleshootingFlag = -1;
 
-long g_cm_assertion_count = 0;
-long g_cm_temp_logs_count = 0;
+long g_sy_assertion_count = 0;
+long g_sy_temp_logs_count = 0;
 
 #if defined(SY_IOS) || defined(WP8) || defined(UWP)
 int g_trace_option = SyTrace_UserDefined | SyTrace_DefaultFile;
@@ -25,12 +25,12 @@ int g_trace_option = SyTrace_UserDefined | SyTrace_DefaultFile | SyTrace_LogStas
 int g_trace_option = SyTrace_UserDefined | SyTrace_Wbxtrace;
 #endif
 
-long cm_get_temp_logs_count() {
-    return g_cm_temp_logs_count;
+long sy_get_temp_logs_count() {
+    return g_sy_temp_logs_count;
 }
 
-void cm_add_temp_log() {
-    g_cm_temp_logs_count++;
+void sy_add_temp_log() {
+    g_sy_temp_logs_count++;
 }
 
 void set_util_external_trace_sink(pfn_trace p_sink)
@@ -60,7 +60,7 @@ unsigned char is_module_trace_enabled(unsigned long dwMask,const char *szModuleN
     return true;
 }
 
-void cm_set_trace_option(int option) {
+void sy_set_trace_option(int option) {
     g_trace_option = option;
 }
 
@@ -185,12 +185,12 @@ SY_OS_EXPORT char *get_leading_id()
     return g_LeadingId;
 }
 
-SY_OS_EXPORT void cm_assertion_report() {
-    g_cm_assertion_count++;
+SY_OS_EXPORT void sy_assertion_report() {
+    g_sy_assertion_count++;
 }
 
-SY_OS_EXPORT long cm_get_assertions_count() {
-    return g_cm_assertion_count;
+SY_OS_EXPORT long sy_get_assertions_count() {
+    return g_sy_assertion_count;
 }
 
 ///////////////////////////////////////////////////////////CSyUtilFuncTracer

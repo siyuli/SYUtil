@@ -43,9 +43,9 @@ extern "C" SY_OS_EXPORT void util_adapter_trace(unsigned long trace_level, const
 //add following for QoSVirtualization 9/6/2012 by juntang
 extern "C" SY_OS_EXPORT char *get_leading_id();
 /// option is combination (OR) of SyTraceType
-extern "C" SY_OS_EXPORT void cm_set_trace_option(int option);
-extern "C" SY_OS_EXPORT long cm_get_temp_logs_count();
-extern "C" SY_OS_EXPORT void cm_add_temp_log();
+extern "C" SY_OS_EXPORT void sy_set_trace_option(int option);
+extern "C" SY_OS_EXPORT long sy_get_temp_logs_count();
+extern "C" SY_OS_EXPORT void sy_add_temp_log();
 
 extern pfn_trace g_util_trace_sink;
 
@@ -75,7 +75,7 @@ extern pfn_trace g_util_trace_sink;
 #define SY_DEBUG_TRACE(str)      UTIL_ADAPTER_TRACE(SY_TRACE_LEVEL_DEBUG, "DEBUG: ", str)
 #define SY_STATISTIC_TRACE(str)  UTIL_ADAPTER_TRACE(SY_TRACE_LEVEL_DEBUG, "STATISTIC: ", str)
 #define SY_DETAIL_TRACE(str)     UTIL_ADAPTER_TRACE(SY_TRACE_LEVEL_DETAIL, "DETAIL: ", str)
-#define SY_TEMP_TRACE(str)       UTIL_ADAPTER_TRACE(SY_TRACE_LEVEL_INFO, "INFO: ", str);cm_add_temp_log();
+#define SY_TEMP_TRACE(str)       UTIL_ADAPTER_TRACE(SY_TRACE_LEVEL_INFO, "INFO: ", str);sy_add_temp_log();
 
 #define SY_ERROR_TRACE_EX(module,str)      UTIL_ADAPTER_TRACE_EX(SY_TRACE_LEVEL_ERROR, "ERROR: ", module, str)
 #define SY_WARNING_TRACE_EX(module,str)    UTIL_ADAPTER_TRACE_EX(SY_TRACE_LEVEL_WARNING, "WARNING: ", module, str)
@@ -84,7 +84,7 @@ extern pfn_trace g_util_trace_sink;
 #define SY_DEBUG_TRACE_EX(module,str)      UTIL_ADAPTER_TRACE_EX(SY_TRACE_LEVEL_DEBUG, "DEBUG: ", module,str)
 #define SY_STATISTIC_TRACE_EX(module,str)  UTIL_ADAPTER_TRACE_EX(SY_TRACE_LEVEL_DEBUG, "STATISTIC: ", module,str)
 #define SY_DETAIL_TRACE_EX(module,str)     UTIL_ADAPTER_TRACE_EX(SY_TRACE_LEVEL_DETAIL, "DETAIL: ", module,str)
-#define SY_TEMP_TRACE_EX(module,str)       UTIL_ADAPTER_TRACE_EX(SY_TRACE_LEVEL_INFO, "INFO: ", module,str);cm_add_temp_log();
+#define SY_TEMP_TRACE_EX(module,str)       UTIL_ADAPTER_TRACE_EX(SY_TRACE_LEVEL_INFO, "INFO: ", module,str);sy_add_temp_log();
 
 #define SY_INFO_TRACE_BIG_EX(module, str)   UNIFIED_TRACE_LEVEL(SY_TRACE_LEVEL_INFO, "INFO: ", module, str, util_adapter_trace, 8192)
 

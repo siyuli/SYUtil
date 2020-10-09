@@ -25,8 +25,8 @@
 # define SY_PATH_SEPARATOR '/'
 #endif
 
-extern "C" SY_OS_EXPORT void cm_assertion_report();
-extern "C" SY_OS_EXPORT long cm_get_assertions_count();
+extern "C" SY_OS_EXPORT void sy_assertion_report();
+extern "C" SY_OS_EXPORT long sy_get_assertions_count();
 
 //Both iOS and MAC need this function
 #if defined SY_MACOS
@@ -78,7 +78,7 @@ inline static bool SyIsDebuggerAttached() {
             auto *p = strrchr(fn, SY_PATH_SEPARATOR); \
             if(p) fn = ++p; \
             SY_ERROR_TRACE(fn << ":" << __LINE__ << " Assert failed: " << #expr); \
-            cm_assertion_report(); \
+            sy_assertion_report(); \
         } \
     } while (0)
 
@@ -97,7 +97,7 @@ inline static bool SyIsDebuggerAttached() {
             auto *p = strrchr(fn, SY_PATH_SEPARATOR); \
             if(p) fn = ++p; \
             SY_ERROR_TRACE(fn << ":" << __LINE__ << " Assert failed: " << #expr); \
-            cm_assertion_report(); \
+            sy_assertion_report(); \
             return rv; \
         } \
     } while (0)
@@ -113,7 +113,7 @@ inline static bool SyIsDebuggerAttached() {
             if(p) fn = ++p; \
             SY_ERROR_TRACE(fn << ":" << __LINE__ << " Assert failed: " << #expr); \
             SY_ASSERTE(false); \
-            cm_assertion_report(); \
+            sy_assertion_report(); \
             return rv; \
         } \
     } while (0)

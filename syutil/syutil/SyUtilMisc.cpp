@@ -429,7 +429,7 @@ void prune_local_addr(local_addr_t *&res)
 #define BUFFERSIZE      4000
 #define MAXADDRS 20
 
-bool cm_fill_v6_addr_detail(const char* ifname, local_addr *addr)
+bool sy_fill_v6_addr_detail(const char* ifname, local_addr *addr)
 {
     int fd = -1;
     int flags6 = 0;
@@ -556,7 +556,7 @@ int get_local_addr(local_addr_t **res)
             memcpy(&_addr->l_addr, tmpAddrPtr, namelen);
             _addr->next = NULL;
             
-            cm_fill_v6_addr_detail(ifa->ifa_name, _addr);
+            sy_fill_v6_addr_detail(ifa->ifa_name, _addr);
             SY_INFO_TRACE("get_local_addr, IP Address = " << ifa->ifa_name << ", " << addressBuffer << ", expire="
                           << (_addr->expire - time(nullptr)) << "s, flag6=" << _addr->flag6);
             
@@ -1076,8 +1076,8 @@ std::string getPrimaryIpStr()
 
 
 //////////////////////////////////////////////////
-int cm_ipv4_enabled = -1;
-int cm_ipv6_enabled = -1;
+int sy_ipv4_enabled = -1;
+int sy_ipv6_enabled = -1;
 
 int ip_check(int &ipvn_enabled, int pf)
 {
@@ -1102,16 +1102,16 @@ int ip_check(int &ipvn_enabled, int pf)
 
 int ipv6_enabled(void)
 {
-    return cm_ipv6_enabled == -1 ?
-           ip_check(cm_ipv6_enabled, PF_INET6) :
-           cm_ipv6_enabled;
+    return sy_ipv6_enabled == -1 ?
+           ip_check(sy_ipv6_enabled, PF_INET6) :
+           sy_ipv6_enabled;
 }
 
 int ipv4_enabled(void)
 {
-    return cm_ipv4_enabled == -1?
-           ip_check(cm_ipv4_enabled, PF_INET) :
-           cm_ipv4_enabled;
+    return sy_ipv4_enabled == -1?
+           ip_check(sy_ipv4_enabled, PF_INET) :
+           sy_ipv4_enabled;
 }
 
 
@@ -1952,7 +1952,7 @@ bool IsWindowsWow64Process() {
 #if defined(SY_WIN_PHONE)
     return false;
 #endif
-    static cm_optional<bool> isWow64Process;
+    static sy_optional<bool> isWow64Process;
     if (!isWow64Process.has_value()) {
         typedef BOOL(WINAPI *LPFN_ISWOW64PROCESS) (HANDLE, PBOOL);
         BOOL bIsWow64 = FALSE;

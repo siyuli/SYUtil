@@ -137,7 +137,7 @@ protected:
     virtual ~ISyTimerQueue() { }
 };
 
-extern "C" SY_OS_EXPORT void cm_set_default_timer_type(SyQueueType type);
+extern "C" SY_OS_EXPORT void sy_set_default_timer_type(SyQueueType type);
 
 END_UTIL_NS
 

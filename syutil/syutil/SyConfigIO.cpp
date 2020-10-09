@@ -17,7 +17,7 @@ START_UTIL_NS
 // File based get_int_from_profile() and get_string_from_profile()
 // implementation
 //
-char *cm_trim_string(char *str)
+char *sy_trim_string(char *str)
 {
     SY_ASSERTE(str);
 
@@ -44,7 +44,7 @@ char *cm_trim_string(char *str)
     return cur_str;
 }
 
-unsigned char cm_is_comment_line(char *cur_str)
+unsigned char sy_is_comment_line(char *cur_str)
 {
     while (*cur_str) {
         if (strchr(" \t\r\n", *cur_str) != NULL) {
@@ -71,7 +71,7 @@ unsigned char read_init_file(FILE *f, char *app_name, char *key_name,
             break;
         }
 
-        if (cm_is_comment_line(buf)) {
+        if (sy_is_comment_line(buf)) {
             continue;
         }
 
@@ -88,7 +88,7 @@ unsigned char read_init_file(FILE *f, char *app_name, char *key_name,
                 }
                 //*strchr(buf, ']') = 0;
 
-                token = cm_trim_string(token);
+                token = sy_trim_string(token);
 #ifndef SY_WIN32
                 if (strcasecmp(token, app_name) == 0) {
                     find_section = TRUE;
@@ -107,20 +107,20 @@ unsigned char read_init_file(FILE *f, char *app_name, char *key_name,
                     *token = 0;
                     token++;
 
-                    char *pKey = cm_trim_string(buf);
+                    char *pKey = sy_trim_string(buf);
 #ifndef SY_WIN32
                     if (strcasecmp(pKey, key_name) == 0)
 #else //SY_WIN32
                     if (_stricmp(pKey, key_name) == 0)
 #endif //SY_WIN32
                     {
-                        token = cm_trim_string(token);
+                        token = sy_trim_string(token);
                         if (*token == '\'' || *token == '"') {
                             int str_len = static_cast<int>(strlen(token));
                             if (token[str_len-1] == *token) {
                                 token[str_len-1] = 0;
                                 token++;
-                                token = cm_trim_string(token);
+                                token = sy_trim_string(token);
                             }
                         }
                         strncpy(ret_str, token, len);
