@@ -10,12 +10,12 @@
 #define __WBX_CATMEMPOOL_H__
 
 #include <MacTypes.h>
-#include "util.h"
+#include "SyDebug.h"
 #pragma pack(push, 1)
 
 #define CPOOL_DEFAULT 	0
 
-SY_NAMESPACE_BG
+START_UTIL_NS
 
 typedef struct _memHeader
 {
@@ -26,12 +26,12 @@ typedef struct _memHeader
 	unsigned char m_used;
 } memHeader;
 
-class CMemoryPool
+class CSyMemoryPool
 {
 public:
-	CMemoryPool(unsigned long size = CPOOL_DEFAULT,
+	CSyMemoryPool(unsigned long size = CPOOL_DEFAULT,
 				  bool useSysMem = false);
-	virtual ~CMemoryPool();
+	virtual ~CSyMemoryPool();
 	
 	bool Init(unsigned long size, bool useSysMem = false);
 	bool Close();
@@ -64,7 +64,7 @@ public:
 	unsigned long m_minblock;
 };
 
-SY_NAMESPACE_ED
+END_UTIL_NS
 
 #pragma pack(pop)
 

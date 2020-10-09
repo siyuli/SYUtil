@@ -1,0 +1,12 @@
+#ifndef SY_THREADEX_H
+#define SY_THREADEX_H
+
+#include "SyCommon.h"
+
+typedef DWORD SY_THREAD_ID;
+typedef HANDLE SY_THREAD_HANDLE;
+typedef HANDLE SY_SEMAPHORE_T;
+typedef CRITICAL_SECTION SY_THREAD_MUTEX_T;
+
+
+#endif //SY_THREADEX_H

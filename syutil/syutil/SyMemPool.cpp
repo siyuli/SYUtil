@@ -7,7 +7,7 @@
 //
 #include <stdlib.h>
 #include <stdio.h>
-#include "MemPool.h"
+#include "SyMemPool.h"
 
 #pragma pack(push, 1)
 
@@ -18,9 +18,9 @@
 
 #pragma mark • Create / Destroy
 
-using namespace sy;
+USE_UTIL_NS
 
-CMemoryPool::CMemoryPool(unsigned long size, bool useSysMem)
+CSyMemoryPool::CSyMemoryPool(unsigned long size, bool useSysMem)
 {	
 	if(size == 0)
 	{
@@ -39,12 +39,12 @@ CMemoryPool::CMemoryPool(unsigned long size, bool useSysMem)
 	}
 }
 
-CMemoryPool::~CMemoryPool()
+CSyMemoryPool::~CSyMemoryPool()
 {
 	Close();
 }
 
-bool CMemoryPool::Init(unsigned long size, bool useSysMem)
+bool CSyMemoryPool::Init(unsigned long size, bool useSysMem)
 {
 #pragma unused(useSysMem)
 	
@@ -69,7 +69,7 @@ bool CMemoryPool::Init(unsigned long size, bool useSysMem)
 	return true;
 }
 
-bool CMemoryPool::Close()
+bool CSyMemoryPool::Close()
 {
 	if(m_data != NULL)
 	{
@@ -90,13 +90,13 @@ bool CMemoryPool::Close()
 
 #pragma mark • Block Info
 
-unsigned long CMemoryPool::GetSize(Ptr p)
+unsigned long CSyMemoryPool::GetSize(Ptr p)
 {
 	if(!p) return(NULL);
 	return( PTR_TO_HEADER(p)->m_size-PTR_TO_HEADER(p)->m_pad);
 }
 
-Ptr CMemoryPool::NextBlock(Ptr p)
+Ptr CSyMemoryPool::NextBlock(Ptr p)
 {
 	memHeader *m;
 	if(!m_data) return(NULL);
@@ -128,7 +128,7 @@ Ptr CMemoryPool::NextBlock(Ptr p)
 #pragma mark • Alloc/ Dealloc
 
 // all of these are inturrupt safe (that's the point)
-Ptr CMemoryPool::CAlloc(unsigned long t)
+Ptr CSyMemoryPool::CAlloc(unsigned long t)
 {
 	memHeader *m=FIRST_BLOCK;
 	
@@ -156,7 +156,7 @@ Ptr CMemoryPool::CAlloc(unsigned long t)
 	return(DATA(m));
 }
 
-void CMemoryPool::FreeAllBlocks()
+void CSyMemoryPool::FreeAllBlocks()
 {
 	SetHeader(FIRST_BLOCK);
 	
@@ -172,7 +172,7 @@ void CMemoryPool::FreeAllBlocks()
 	m_numberofblocks=1;
 }
 
-void CMemoryPool::CFree(Ptr y)
+void CSyMemoryPool::CFree(Ptr y)
 {	
 	if(!y) return;
 	if(!m_data) return;
@@ -186,7 +186,7 @@ void CMemoryPool::CFree(Ptr y)
 	Check();
 }
 
-void CMemoryPool::sCFree(Ptr y)
+void CSyMemoryPool::sCFree(Ptr y)
 {
 	if(!y) return;
 	
@@ -197,7 +197,7 @@ void CMemoryPool::sCFree(Ptr y)
 
 // turns m into a block of size newsize
 // and might turn the rest of the block into another free one
-void CMemoryPool::SplitBlock(memHeader *m, unsigned long newsize)
+void CSyMemoryPool::SplitBlock(memHeader *m, unsigned long newsize)
 {
 	if(m->m_size-newsize<sizeof(memHeader))
 	{
@@ -223,7 +223,7 @@ void CMemoryPool::SplitBlock(memHeader *m, unsigned long newsize)
 
 // Amalgamate consecutive free blocks 
 #pragma mark • HouseKeeping
-void CMemoryPool::Check()
+void CSyMemoryPool::Check()
 {
 	if(!m_data) return;
 	if(!m_size) return;
