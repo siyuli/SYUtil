@@ -207,6 +207,48 @@ SY_OS_EXPORT const char* sy_get_osinfo();
 
 SY_OS_EXPORT void getMacSystemVersion(long *pMajorVer, long *pMinorVer, long *pPatchVer);
 
+#ifdef SY_WIN32
+
+#include <Ws2tcpip.h>
+
+typedef int (WSAAPI *pf_getaddrinfo)(
+                                     _In_opt_  PCSTR pNodeName,
+                                     _In_opt_  PCSTR pServiceName,
+                                     _In_opt_  const ADDRINFOA *pHints,
+                                     _Out_     PADDRINFOA *ppResult
+                                     );
+
+typedef int (WSAAPI *pf_getnameinfo)(
+                                     __in   const struct sockaddr FAR *sa,
+                                     __in   socklen_t salen,
+                                     __out  char FAR *host,
+                                     __in   DWORD hostlen,
+                                     __out  char FAR *serv,
+                                     __in   DWORD servlen,
+                                     __in   int flags
+                                     );
+
+typedef void (WSAAPI *pf_freeaddrinfo)(
+                                       __in  struct addrinfo *ai
+                                       );
+
+#ifdef SY_UNITTEST
+extern __declspec(dllimport) pf_getaddrinfo tp_getaddrinfo;
+extern __declspec(dllimport) pf_getnameinfo tp_getnameinfo;
+extern __declspec(dllimport) pf_freeaddrinfo tp_freeaddrinfo;
+#else
+extern SY_OS_EXPORT pf_getaddrinfo tp_getaddrinfo;
+extern SY_OS_EXPORT pf_getnameinfo tp_getnameinfo;
+extern SY_OS_EXPORT pf_freeaddrinfo tp_freeaddrinfo;
+#endif
+
+
+extern HMODULE g_hmod_ws2_32;
+extern int g_support_ipv6_resolve;
+int SY_OS_EXPORT ipv6_dns_resolve(void);
+
+#endif //SY_WIN32
+
 END_UTIL_NS
 
 #endif  //SY_UTILMISC_H

@@ -139,13 +139,13 @@ if (condition) UTIL_ADAPTER_TRACE_EX(mask, level, module, str)
 #define LOG_OCCURRENCES_MOD_N LOG_EVERY_N_VARNAME(occurrences_mod_n_, __LINE__)
 
 #define SY_LOG_EVERY_N(mask, level, n, str) \
-    static sy_data_type<int>::type LOG_OCCURRENCES = 0, LOG_OCCURRENCES_MOD_N = 0; \
+    static int LOG_OCCURRENCES = 0, LOG_OCCURRENCES_MOD_N = 0; \
     ++LOG_OCCURRENCES; \
     if (++LOG_OCCURRENCES_MOD_N > n) LOG_OCCURRENCES_MOD_N -= n; \
     if (LOG_OCCURRENCES_MOD_N == 1) UTIL_ADAPTER_TRACE(mask, level, str)
 
 #define SY_LOG_EVERY_N_EX(mask, level, n, module, str) \
-    static sy_data_type<int>::type LOG_OCCURRENCES = 0, LOG_OCCURRENCES_MOD_N = 0; \
+    static int LOG_OCCURRENCES = 0, LOG_OCCURRENCES_MOD_N = 0; \
     ++LOG_OCCURRENCES; \
     if (++LOG_OCCURRENCES_MOD_N > n) LOG_OCCURRENCES_MOD_N -= n; \
     if (LOG_OCCURRENCES_MOD_N == 1) UTIL_ADAPTER_TRACE_EX(mask, level, module, str)

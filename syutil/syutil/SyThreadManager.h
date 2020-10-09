@@ -8,6 +8,13 @@
 
 START_UTIL_NS
 
+extern "C"
+{
+    SY_OS_EXPORT bool sy_util_init();
+    SY_OS_EXPORT bool sy_util_uninit();
+    
+}
+
 class CSyTimeValue;
 class ASyThread;
 class ISyReactor;

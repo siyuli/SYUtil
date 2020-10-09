@@ -64,6 +64,37 @@
 		13493DE7253068F200A89A28 /* SyDefaultDir.h in Headers */ = {isa = PBXBuildFile; fileRef = 13493DE5253068F200A89A28 /* SyDefaultDir.h */; };
 		13493DE9253088FB00A89A28 /* SyUtilClasses.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 13493DE8253088FA00A89A28 /* SyUtilClasses.cpp */; };
 		13493DEC2530899800A89A28 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13493DEB2530899800A89A28 /* Carbon.framework */; };
+		13493DF025308D3900A89A28 /* SyThreadReactor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 13493DED25308D3800A89A28 /* SyThreadReactor.cpp */; };
+		13493DF125308D3900A89A28 /* SyThreadReactor.h in Headers */ = {isa = PBXBuildFile; fileRef = 13493DEE25308D3800A89A28 /* SyThreadReactor.h */; };
+		13493DF225308D3900A89A28 /* SyThreadManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 13493DEF25308D3800A89A28 /* SyThreadManager.cpp */; };
+		13493DF425308DA800A89A28 /* SyReactorInterface.h in Headers */ = {isa = PBXBuildFile; fileRef = 13493DF325308DA800A89A28 /* SyReactorInterface.h */; };
+		13493DF725308E1B00A89A28 /* SyThreadTask.h in Headers */ = {isa = PBXBuildFile; fileRef = 13493DF525308E1B00A89A28 /* SyThreadTask.h */; };
+		13493DF825308E1B00A89A28 /* SyThreadTask.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 13493DF625308E1B00A89A28 /* SyThreadTask.cpp */; };
+		13493DFA25308E7000A89A28 /* SyObserver.h in Headers */ = {isa = PBXBuildFile; fileRef = 13493DF925308E7000A89A28 /* SyObserver.h */; };
+		13493DFD25308EC200A89A28 /* SyTimerQueueOrderedList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 13493DFB25308EC200A89A28 /* SyTimerQueueOrderedList.cpp */; };
+		13493DFE25308EC200A89A28 /* SyTimerQueueOrderedList.h in Headers */ = {isa = PBXBuildFile; fileRef = 13493DFC25308EC200A89A28 /* SyTimerQueueOrderedList.h */; };
+		13493E0125308EFF00A89A28 /* SyTimerQueueBase.h in Headers */ = {isa = PBXBuildFile; fileRef = 13493DFF25308EFE00A89A28 /* SyTimerQueueBase.h */; };
+		13493E0225308EFF00A89A28 /* SyTimerQueueBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 13493E0025308EFE00A89A28 /* SyTimerQueueBase.cpp */; };
+		13493E052530907200A89A28 /* SySSLUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = 13493E032530907100A89A28 /* SySSLUtil.h */; };
+		13493E062530907200A89A28 /* SySSLUtil.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 13493E042530907100A89A28 /* SySSLUtil.cpp */; };
+		13493E0925309B3100A89A28 /* SyReactorSelect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 13493E0725309B3100A89A28 /* SyReactorSelect.cpp */; };
+		13493E0A25309B3100A89A28 /* SyReactorSelect.h in Headers */ = {isa = PBXBuildFile; fileRef = 13493E0825309B3100A89A28 /* SyReactorSelect.h */; };
+		13493E0D25309B4400A89A28 /* SyThreadMacEventPatch.h in Headers */ = {isa = PBXBuildFile; fileRef = 13493E0B25309B4400A89A28 /* SyThreadMacEventPatch.h */; };
+		13493E0E25309B4400A89A28 /* SyThreadMacEventPatch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 13493E0C25309B4400A89A28 /* SyThreadMacEventPatch.cpp */; };
+		13493E1125309D0C00A89A28 /* SyReactorBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 13493E0F25309D0C00A89A28 /* SyReactorBase.cpp */; };
+		13493E1225309D0C00A89A28 /* SyReactorBase.h in Headers */ = {isa = PBXBuildFile; fileRef = 13493E1025309D0C00A89A28 /* SyReactorBase.h */; };
+		13493E1525309D5100A89A28 /* SyReactorNotifyPipe.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 13493E1325309D5000A89A28 /* SyReactorNotifyPipe.cpp */; };
+		13493E1625309D5100A89A28 /* SyReactorNotifyPipe.h in Headers */ = {isa = PBXBuildFile; fileRef = 13493E1425309D5100A89A28 /* SyReactorNotifyPipe.h */; };
+		13493E1925309D9900A89A28 /* SyPipe.h in Headers */ = {isa = PBXBuildFile; fileRef = 13493E1725309D9900A89A28 /* SyPipe.h */; };
+		13493E1A25309D9900A89A28 /* SyPipe.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 13493E1825309D9900A89A28 /* SyPipe.cpp */; };
+		13493E1E25309DF500A89A28 /* SyErrorNetwork.h in Headers */ = {isa = PBXBuildFile; fileRef = 13493E1B25309DF500A89A28 /* SyErrorNetwork.h */; };
+		13493E1F25309DF500A89A28 /* SySocket.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 13493E1C25309DF500A89A28 /* SySocket.cpp */; };
+		13493E2025309DF500A89A28 /* SySocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 13493E1D25309DF500A89A28 /* SySocket.h */; };
+		13493E2225309E3B00A89A28 /* SyInetAddr.h in Headers */ = {isa = PBXBuildFile; fileRef = 13493E2125309E3B00A89A28 /* SyInetAddr.h */; };
+		13493E2525309FD200A89A28 /* libssl.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 13493E2325309FD200A89A28 /* libssl.dylib */; };
+		13493E2625309FD200A89A28 /* libcrypto.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 13493E2425309FD200A89A28 /* libcrypto.dylib */; };
+		13493E282530A04700A89A28 /* SyReactorInterface.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 13493E272530A04700A89A28 /* SyReactorInterface.cpp */; };
+		13493E2A2530A09600A89A28 /* SyInetAddr.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 13493E292530A09600A89A28 /* SyInetAddr.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -126,6 +157,37 @@
 		13493DE5253068F200A89A28 /* SyDefaultDir.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SyDefaultDir.h; path = ../../syutil/SyDefaultDir.h; sourceTree = "<group>"; };
 		13493DE8253088FA00A89A28 /* SyUtilClasses.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SyUtilClasses.cpp; path = ../../syutil/SyUtilClasses.cpp; sourceTree = "<group>"; };
 		13493DEB2530899800A89A28 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
+		13493DED25308D3800A89A28 /* SyThreadReactor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SyThreadReactor.cpp; path = ../../syutil/SyThreadReactor.cpp; sourceTree = "<group>"; };
+		13493DEE25308D3800A89A28 /* SyThreadReactor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SyThreadReactor.h; path = ../../syutil/SyThreadReactor.h; sourceTree = "<group>"; };
+		13493DEF25308D3800A89A28 /* SyThreadManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SyThreadManager.cpp; path = ../../syutil/SyThreadManager.cpp; sourceTree = "<group>"; };
+		13493DF325308DA800A89A28 /* SyReactorInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SyReactorInterface.h; path = ../../syutil/SyReactorInterface.h; sourceTree = "<group>"; };
+		13493DF525308E1B00A89A28 /* SyThreadTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SyThreadTask.h; path = ../../syutil/SyThreadTask.h; sourceTree = "<group>"; };
+		13493DF625308E1B00A89A28 /* SyThreadTask.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SyThreadTask.cpp; path = ../../syutil/SyThreadTask.cpp; sourceTree = "<group>"; };
+		13493DF925308E7000A89A28 /* SyObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SyObserver.h; path = ../../syutil/SyObserver.h; sourceTree = "<group>"; };
+		13493DFB25308EC200A89A28 /* SyTimerQueueOrderedList.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SyTimerQueueOrderedList.cpp; path = ../../syutil/SyTimerQueueOrderedList.cpp; sourceTree = "<group>"; };
+		13493DFC25308EC200A89A28 /* SyTimerQueueOrderedList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SyTimerQueueOrderedList.h; path = ../../syutil/SyTimerQueueOrderedList.h; sourceTree = "<group>"; };
+		13493DFF25308EFE00A89A28 /* SyTimerQueueBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SyTimerQueueBase.h; path = ../../syutil/SyTimerQueueBase.h; sourceTree = "<group>"; };
+		13493E0025308EFE00A89A28 /* SyTimerQueueBase.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SyTimerQueueBase.cpp; path = ../../syutil/SyTimerQueueBase.cpp; sourceTree = "<group>"; };
+		13493E032530907100A89A28 /* SySSLUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SySSLUtil.h; path = ../../syutil/SySSLUtil.h; sourceTree = "<group>"; };
+		13493E042530907100A89A28 /* SySSLUtil.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SySSLUtil.cpp; path = ../../syutil/SySSLUtil.cpp; sourceTree = "<group>"; };
+		13493E0725309B3100A89A28 /* SyReactorSelect.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SyReactorSelect.cpp; path = ../../syutil/SyReactorSelect.cpp; sourceTree = "<group>"; };
+		13493E0825309B3100A89A28 /* SyReactorSelect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SyReactorSelect.h; path = ../../syutil/SyReactorSelect.h; sourceTree = "<group>"; };
+		13493E0B25309B4400A89A28 /* SyThreadMacEventPatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SyThreadMacEventPatch.h; sourceTree = "<group>"; };
+		13493E0C25309B4400A89A28 /* SyThreadMacEventPatch.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SyThreadMacEventPatch.cpp; sourceTree = "<group>"; };
+		13493E0F25309D0C00A89A28 /* SyReactorBase.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SyReactorBase.cpp; path = ../../syutil/SyReactorBase.cpp; sourceTree = "<group>"; };
+		13493E1025309D0C00A89A28 /* SyReactorBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SyReactorBase.h; path = ../../syutil/SyReactorBase.h; sourceTree = "<group>"; };
+		13493E1325309D5000A89A28 /* SyReactorNotifyPipe.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SyReactorNotifyPipe.cpp; path = ../../syutil/SyReactorNotifyPipe.cpp; sourceTree = "<group>"; };
+		13493E1425309D5100A89A28 /* SyReactorNotifyPipe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SyReactorNotifyPipe.h; path = ../../syutil/SyReactorNotifyPipe.h; sourceTree = "<group>"; };
+		13493E1725309D9900A89A28 /* SyPipe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SyPipe.h; path = ../../syutil/SyPipe.h; sourceTree = "<group>"; };
+		13493E1825309D9900A89A28 /* SyPipe.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SyPipe.cpp; path = ../../syutil/SyPipe.cpp; sourceTree = "<group>"; };
+		13493E1B25309DF500A89A28 /* SyErrorNetwork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SyErrorNetwork.h; path = ../../syutil/SyErrorNetwork.h; sourceTree = "<group>"; };
+		13493E1C25309DF500A89A28 /* SySocket.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SySocket.cpp; path = ../../syutil/SySocket.cpp; sourceTree = "<group>"; };
+		13493E1D25309DF500A89A28 /* SySocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SySocket.h; path = ../../syutil/SySocket.h; sourceTree = "<group>"; };
+		13493E2125309E3B00A89A28 /* SyInetAddr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SyInetAddr.h; path = ../../syutil/SyInetAddr.h; sourceTree = "<group>"; };
+		13493E2325309FD200A89A28 /* libssl.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libssl.dylib; path = ../../openssl/libs/mac/x86_64/libssl.dylib; sourceTree = "<group>"; };
+		13493E2425309FD200A89A28 /* libcrypto.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcrypto.dylib; path = ../../openssl/libs/mac/x86_64/libcrypto.dylib; sourceTree = "<group>"; };
+		13493E272530A04700A89A28 /* SyReactorInterface.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SyReactorInterface.cpp; path = ../../syutil/SyReactorInterface.cpp; sourceTree = "<group>"; };
+		13493E292530A09600A89A28 /* SyInetAddr.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SyInetAddr.cpp; path = ../../syutil/SyInetAddr.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +196,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				13493DEC2530899800A89A28 /* Carbon.framework in Frameworks */,
+				13493E2525309FD200A89A28 /* libssl.dylib in Frameworks */,
+				13493E2625309FD200A89A28 /* libcrypto.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -170,6 +234,35 @@
 		13493D72253004F500A89A28 /* syutil */ = {
 			isa = PBXGroup;
 			children = (
+				13493E292530A09600A89A28 /* SyInetAddr.cpp */,
+				13493E2125309E3B00A89A28 /* SyInetAddr.h */,
+				13493E1B25309DF500A89A28 /* SyErrorNetwork.h */,
+				13493E1C25309DF500A89A28 /* SySocket.cpp */,
+				13493E1D25309DF500A89A28 /* SySocket.h */,
+				13493E1825309D9900A89A28 /* SyPipe.cpp */,
+				13493E1725309D9900A89A28 /* SyPipe.h */,
+				13493E1325309D5000A89A28 /* SyReactorNotifyPipe.cpp */,
+				13493E1425309D5100A89A28 /* SyReactorNotifyPipe.h */,
+				13493E0F25309D0C00A89A28 /* SyReactorBase.cpp */,
+				13493E1025309D0C00A89A28 /* SyReactorBase.h */,
+				13493E0725309B3100A89A28 /* SyReactorSelect.cpp */,
+				13493E0825309B3100A89A28 /* SyReactorSelect.h */,
+				13493E042530907100A89A28 /* SySSLUtil.cpp */,
+				13493E032530907100A89A28 /* SySSLUtil.h */,
+				13493E0025308EFE00A89A28 /* SyTimerQueueBase.cpp */,
+				13493DFF25308EFE00A89A28 /* SyTimerQueueBase.h */,
+				13493DFB25308EC200A89A28 /* SyTimerQueueOrderedList.cpp */,
+				13493DFC25308EC200A89A28 /* SyTimerQueueOrderedList.h */,
+				13493DF925308E7000A89A28 /* SyObserver.h */,
+				13493DF625308E1B00A89A28 /* SyThreadTask.cpp */,
+				13493DF525308E1B00A89A28 /* SyThreadTask.h */,
+				13493DEF25308D3800A89A28 /* SyThreadManager.cpp */,
+				13493DB02530474400A89A28 /* SyThreadManager.h */,
+				13493DAC25303F9900A89A28 /* SyThreadInterface.h */,
+				13493DED25308D3800A89A28 /* SyThreadReactor.cpp */,
+				13493DEE25308D3800A89A28 /* SyThreadReactor.h */,
+				13493E272530A04700A89A28 /* SyReactorInterface.cpp */,
+				13493DF325308DA800A89A28 /* SyReactorInterface.h */,
 				13493DE4253068F200A89A28 /* SyDefaultDir.cpp */,
 				13493DE5253068F200A89A28 /* SyDefaultDir.h */,
 				13493DE22530687A00A89A28 /* SyMacUtil.mm */,
@@ -195,10 +288,8 @@
 				13493DB72530482600A89A28 /* SyConditionVariable.h */,
 				13493DB3253047D400A89A28 /* SyStdCpp.h */,
 				13493DB2253047D400A89A28 /* SyString.h */,
-				13493DB02530474400A89A28 /* SyThreadManager.h */,
 				13493DD82530669300A89A28 /* SyTimeValue.cpp */,
 				13493DAE2530403400A89A28 /* SyTimeValue.h */,
-				13493DAC25303F9900A89A28 /* SyThreadInterface.h */,
 				13493DA825303C2F00A89A28 /* SyError.h */,
 				13493DA6253035FD00A89A28 /* SyDefines.h */,
 				13493DA4253033F300A89A28 /* SyCommDef.h */,
@@ -226,6 +317,8 @@
 		13493D7D25302F1200A89A28 /* macos */ = {
 			isa = PBXGroup;
 			children = (
+				13493E0C25309B4400A89A28 /* SyThreadMacEventPatch.cpp */,
+				13493E0B25309B4400A89A28 /* SyThreadMacEventPatch.h */,
 				13493D7E25302F1200A89A28 /* SyNetwork.h */,
 				13493D7F25302F1200A89A28 /* ProcessUtils.h */,
 				13493D8025302F1200A89A28 /* SyDef.h */,
@@ -241,6 +334,8 @@
 		13493DEA2530899800A89A28 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				13493E2425309FD200A89A28 /* libcrypto.dylib */,
+				13493E2325309FD200A89A28 /* libssl.dylib */,
 				13493DEB2530899800A89A28 /* Carbon.framework */,
 			);
 			name = Frameworks;
@@ -258,27 +353,39 @@
 				13493DB5253047D400A89A28 /* SyStdCpp.h in Headers */,
 				13493D9B253032AB00A89A28 /* SyDebug.h in Headers */,
 				13493DB4253047D400A89A28 /* SyString.h in Headers */,
+				13493E052530907200A89A28 /* SySSLUtil.h in Headers */,
 				13493DE7253068F200A89A28 /* SyDefaultDir.h in Headers */,
 				13493DAB25303E1400A89A28 /* syutil-Prefix.pch in Headers */,
 				13493D8725302F1200A89A28 /* SyDef.h in Headers */,
 				13493DA3253033C900A89A28 /* SyOSAtomicT.h in Headers */,
 				13493DD52530631D00A89A28 /* SystemCapacity.h in Headers */,
 				13493DBF25304F9F00A89A28 /* SyUtilTemplates.h in Headers */,
+				13493E2025309DF500A89A28 /* SySocket.h in Headers */,
 				13493D902530322700A89A28 /* SyThreadMisc.h in Headers */,
 				13493DC12530501700A89A28 /* SyReferenceControl.h in Headers */,
+				13493E0125308EFF00A89A28 /* SyTimerQueueBase.h in Headers */,
 				13493DD1253051EE00A89A28 /* SyTimerWrapperID.h in Headers */,
 				13493DCD2530516F00A89A28 /* timer_internal.h in Headers */,
+				13493E1925309D9900A89A28 /* SyPipe.h in Headers */,
 				13493DC7253050BF00A89A28 /* SyEventQueueBase.h in Headers */,
 				13493DC32530505700A89A28 /* SyUtilClasses.h in Headers */,
 				13493DE12530684200A89A28 /* SyConfigIO.h in Headers */,
 				13493D782530050900A89A28 /* SyMemPool.h in Headers */,
+				13493DF725308E1B00A89A28 /* SyThreadTask.h in Headers */,
+				13493DF425308DA800A89A28 /* SyReactorInterface.h in Headers */,
+				13493DFA25308E7000A89A28 /* SyObserver.h in Headers */,
 				13493D8A25302F1200A89A28 /* SyDataType.h in Headers */,
 				13493D8625302F1200A89A28 /* ProcessUtils.h in Headers */,
 				13493D792530050900A89A28 /* SyTextFormator.h in Headers */,
 				13493DB12530474500A89A28 /* SyThreadManager.h in Headers */,
+				13493E0D25309B4400A89A28 /* SyThreadMacEventPatch.h in Headers */,
 				13493DAD25303F9900A89A28 /* SyThreadInterface.h in Headers */,
+				13493E1625309D5100A89A28 /* SyReactorNotifyPipe.h in Headers */,
 				13493D97253032AB00A89A28 /* SyAtomicOperationT.h in Headers */,
 				13493DA5253033F300A89A28 /* SyCommDef.h in Headers */,
+				13493E1E25309DF500A89A28 /* SyErrorNetwork.h in Headers */,
+				13493E0A25309B3100A89A28 /* SyReactorSelect.h in Headers */,
+				13493E1225309D0C00A89A28 /* SyReactorBase.h in Headers */,
 				13493D8525302F1200A89A28 /* SyNetwork.h in Headers */,
 				13493DB92530482600A89A28 /* SyConditionVariable.h in Headers */,
 				13493DAF2530403400A89A28 /* SyTimeValue.h in Headers */,
@@ -286,9 +393,12 @@
 				13493DA925303C3000A89A28 /* SyError.h in Headers */,
 				13493D9A253032AB00A89A28 /* SyThread.h in Headers */,
 				13493D99253032AB00A89A28 /* SyAssert.h in Headers */,
+				13493DF125308D3900A89A28 /* SyThreadReactor.h in Headers */,
 				13493DBC253048A300A89A28 /* SyUtilMisc.h in Headers */,
 				13493D8B25302F1200A89A28 /* ProcessMontior.h in Headers */,
 				13493DCB2530513600A89A28 /* timer.h in Headers */,
+				13493E2225309E3B00A89A28 /* SyInetAddr.h in Headers */,
+				13493DFE25308EC200A89A28 /* SyTimerQueueOrderedList.h in Headers */,
 				13493DA7253035FD00A89A28 /* SyDefines.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -361,15 +471,27 @@
 			buildActionMask = 2147483647;
 			files = (
 				13493DD0253051EE00A89A28 /* SyTimerWrapperID.cpp in Sources */,
+				13493DF225308D3900A89A28 /* SyThreadManager.cpp in Sources */,
+				13493DF825308E1B00A89A28 /* SyThreadTask.cpp in Sources */,
+				13493E062530907200A89A28 /* SySSLUtil.cpp in Sources */,
 				13493D7A2530050900A89A28 /* SyTextFormator.cpp in Sources */,
 				13493DE02530684200A89A28 /* SyConfigIO.cpp in Sources */,
+				13493DFD25308EC200A89A28 /* SyTimerQueueOrderedList.cpp in Sources */,
 				13493DE6253068F200A89A28 /* SyDefaultDir.cpp in Sources */,
 				13493DCA2530513600A89A28 /* timer.cpp in Sources */,
 				13493D9F253032FB00A89A28 /* SyAtomicOperationT.cpp in Sources */,
 				13493D98253032AB00A89A28 /* SyThread.cpp in Sources */,
+				13493E1F25309DF500A89A28 /* SySocket.cpp in Sources */,
+				13493E0E25309B4400A89A28 /* SyThreadMacEventPatch.cpp in Sources */,
+				13493E0225308EFF00A89A28 /* SyTimerQueueBase.cpp in Sources */,
+				13493E1125309D0C00A89A28 /* SyReactorBase.cpp in Sources */,
 				13493DC6253050BF00A89A28 /* SyEventQueueBase.cpp in Sources */,
+				13493DF025308D3900A89A28 /* SyThreadReactor.cpp in Sources */,
+				13493E2A2530A09600A89A28 /* SyInetAddr.cpp in Sources */,
+				13493E0925309B3100A89A28 /* SyReactorSelect.cpp in Sources */,
 				13493D7B2530050900A89A28 /* SyMemPool.cpp in Sources */,
 				13493DDB2530670600A89A28 /* SyThreadInterface.cpp in Sources */,
+				13493E282530A04700A89A28 /* SyReactorInterface.cpp in Sources */,
 				13493D912530322700A89A28 /* SyThreadMisc.cpp in Sources */,
 				13493DBD253048A300A89A28 /* SyUtilMisc.cpp in Sources */,
 				13493DE32530687A00A89A28 /* SyMacUtil.mm in Sources */,
@@ -378,6 +500,8 @@
 				13493DD42530631D00A89A28 /* SystemCapacity.cpp in Sources */,
 				13493DE9253088FB00A89A28 /* SyUtilClasses.cpp in Sources */,
 				13493DA0253032FB00A89A28 /* SyMutex.cpp in Sources */,
+				13493E1A25309D9900A89A28 /* SyPipe.cpp in Sources */,
+				13493E1525309D5100A89A28 /* SyReactorNotifyPipe.cpp in Sources */,
 				13493DDD253067C700A89A28 /* SyDebug.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -514,6 +638,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_VERSION = A;
 				GCC_PREFIX_HEADER = "syutil_mac/syutil-Prefix.pch";
+				HEADER_SEARCH_PATHS = ../../openssl/include;
 				INFOPLIST_FILE = syutil_mac/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -521,6 +646,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = "../../openssl/libs/mac/$(ARCHS)";
 				PRODUCT_BUNDLE_IDENTIFIER = "soya.syutil-mac";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -539,6 +665,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_VERSION = A;
 				GCC_PREFIX_HEADER = "syutil_mac/syutil-Prefix.pch";
+				HEADER_SEARCH_PATHS = ../../openssl/include;
 				INFOPLIST_FILE = syutil_mac/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -546,6 +673,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = "../../openssl/libs/mac/$(ARCHS)";
 				PRODUCT_BUNDLE_IDENTIFIER = "soya.syutil-mac";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;

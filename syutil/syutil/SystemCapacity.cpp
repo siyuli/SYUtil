@@ -1262,13 +1262,13 @@ int getGpuInfo(std::vector<std::string> &gpuList, std::vector<unsigned int> &mem
     int iAdapterNum = 0;
 
     std::string dllName = "DXGI.dll";
-    WME_HMODULE m_hModule = wme_load_library(dllName.c_str(), dllName.size());
+    WME_HMODULE m_hModule = sy_load_library(dllName.c_str(), dllName.size());
     if (!m_hModule) {
         return 1;
     }
     using PFN_CreateDXGIFactory1 = HRESULT(WINAPI *)(REFIID riid, _Out_ void **ppFactory);
     PFN_CreateDXGIFactory1 m_pfnCreateDXGIFactory1 = nullptr;
-    m_pfnCreateDXGIFactory1 = (PFN_CreateDXGIFactory1) wme_get_proc_address(m_hModule, "CreateDXGIFactory1");
+    m_pfnCreateDXGIFactory1 = (PFN_CreateDXGIFactory1) sy_get_proc_address(m_hModule, "CreateDXGIFactory1");
     // Create DXGI
     HRESULT hr = m_pfnCreateDXGIFactory1(__uuidof(IDXGIFactory), (void**)(&pFactory));
 
@@ -1308,7 +1308,7 @@ int getGpuInfo(std::vector<std::string> &gpuList, std::vector<unsigned int> &mem
     vAdapters.clear();
 
     if (m_hModule) {
-        wme_free_library(m_hModule);
+        sy_free_library(m_hModule);
         m_hModule = nullptr;
     }
 
