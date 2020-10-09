@@ -54,7 +54,14 @@
 		13493DD1253051EE00A89A28 /* SyTimerWrapperID.h in Headers */ = {isa = PBXBuildFile; fileRef = 13493DCF253051EE00A89A28 /* SyTimerWrapperID.h */; };
 		13493DD42530631D00A89A28 /* SystemCapacity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 13493DD22530631D00A89A28 /* SystemCapacity.cpp */; };
 		13493DD52530631D00A89A28 /* SystemCapacity.h in Headers */ = {isa = PBXBuildFile; fileRef = 13493DD32530631D00A89A28 /* SystemCapacity.h */; };
-		13493DD72530657600A89A28 /* SyMacUtil.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13493DD62530657600A89A28 /* SyMacUtil.mm */; };
+		13493DD92530669300A89A28 /* SyTimeValue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 13493DD82530669300A89A28 /* SyTimeValue.cpp */; };
+		13493DDB2530670600A89A28 /* SyThreadInterface.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 13493DDA2530670500A89A28 /* SyThreadInterface.cpp */; };
+		13493DDD253067C700A89A28 /* SyDebug.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 13493DDC253067C700A89A28 /* SyDebug.cpp */; };
+		13493DE02530684200A89A28 /* SyConfigIO.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 13493DDE2530684100A89A28 /* SyConfigIO.cpp */; };
+		13493DE12530684200A89A28 /* SyConfigIO.h in Headers */ = {isa = PBXBuildFile; fileRef = 13493DDF2530684100A89A28 /* SyConfigIO.h */; };
+		13493DE32530687A00A89A28 /* SyMacUtil.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13493DE22530687A00A89A28 /* SyMacUtil.mm */; };
+		13493DE6253068F200A89A28 /* SyDefaultDir.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 13493DE4253068F200A89A28 /* SyDefaultDir.cpp */; };
+		13493DE7253068F200A89A28 /* SyDefaultDir.h in Headers */ = {isa = PBXBuildFile; fileRef = 13493DE5253068F200A89A28 /* SyDefaultDir.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -107,7 +114,14 @@
 		13493DCF253051EE00A89A28 /* SyTimerWrapperID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SyTimerWrapperID.h; path = ../../syutil/SyTimerWrapperID.h; sourceTree = "<group>"; };
 		13493DD22530631D00A89A28 /* SystemCapacity.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SystemCapacity.cpp; path = ../../syutil/SystemCapacity.cpp; sourceTree = "<group>"; };
 		13493DD32530631D00A89A28 /* SystemCapacity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SystemCapacity.h; path = ../../syutil/SystemCapacity.h; sourceTree = "<group>"; };
-		13493DD62530657600A89A28 /* SyMacUtil.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SyMacUtil.mm; sourceTree = "<group>"; };
+		13493DD82530669300A89A28 /* SyTimeValue.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SyTimeValue.cpp; path = ../../syutil/SyTimeValue.cpp; sourceTree = "<group>"; };
+		13493DDA2530670500A89A28 /* SyThreadInterface.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SyThreadInterface.cpp; path = ../../syutil/SyThreadInterface.cpp; sourceTree = "<group>"; };
+		13493DDC253067C700A89A28 /* SyDebug.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SyDebug.cpp; path = ../../syutil/SyDebug.cpp; sourceTree = "<group>"; };
+		13493DDE2530684100A89A28 /* SyConfigIO.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SyConfigIO.cpp; path = ../../syutil/SyConfigIO.cpp; sourceTree = "<group>"; };
+		13493DDF2530684100A89A28 /* SyConfigIO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SyConfigIO.h; path = ../../syutil/SyConfigIO.h; sourceTree = "<group>"; };
+		13493DE22530687A00A89A28 /* SyMacUtil.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = SyMacUtil.mm; path = ../../syutil/macos/SyMacUtil.mm; sourceTree = "<group>"; };
+		13493DE4253068F200A89A28 /* SyDefaultDir.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SyDefaultDir.cpp; path = ../../syutil/SyDefaultDir.cpp; sourceTree = "<group>"; };
+		13493DE5253068F200A89A28 /* SyDefaultDir.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SyDefaultDir.h; path = ../../syutil/SyDefaultDir.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,7 +164,12 @@
 		13493D72253004F500A89A28 /* syutil */ = {
 			isa = PBXGroup;
 			children = (
-				13493DD62530657600A89A28 /* SyMacUtil.mm */,
+				13493DE4253068F200A89A28 /* SyDefaultDir.cpp */,
+				13493DE5253068F200A89A28 /* SyDefaultDir.h */,
+				13493DE22530687A00A89A28 /* SyMacUtil.mm */,
+				13493DDE2530684100A89A28 /* SyConfigIO.cpp */,
+				13493DDF2530684100A89A28 /* SyConfigIO.h */,
+				13493DDA2530670500A89A28 /* SyThreadInterface.cpp */,
 				13493DD22530631D00A89A28 /* SystemCapacity.cpp */,
 				13493DD32530631D00A89A28 /* SystemCapacity.h */,
 				13493DCE253051EE00A89A28 /* SyTimerWrapperID.cpp */,
@@ -170,6 +189,7 @@
 				13493DB3253047D400A89A28 /* SyStdCpp.h */,
 				13493DB2253047D400A89A28 /* SyString.h */,
 				13493DB02530474400A89A28 /* SyThreadManager.h */,
+				13493DD82530669300A89A28 /* SyTimeValue.cpp */,
 				13493DAE2530403400A89A28 /* SyTimeValue.h */,
 				13493DAC25303F9900A89A28 /* SyThreadInterface.h */,
 				13493DA825303C2F00A89A28 /* SyError.h */,
@@ -181,6 +201,7 @@
 				13493D9D253032FB00A89A28 /* SyMutex.cpp */,
 				13493D9E253032FB00A89A28 /* SyMutex.h */,
 				13493D94253032AB00A89A28 /* SyAssert.h */,
+				13493DDC253067C700A89A28 /* SyDebug.cpp */,
 				13493D96253032AB00A89A28 /* SyDebug.h */,
 				13493D93253032AB00A89A28 /* SyThread.cpp */,
 				13493D95253032AB00A89A28 /* SyThread.h */,
@@ -222,6 +243,7 @@
 				13493DB5253047D400A89A28 /* SyStdCpp.h in Headers */,
 				13493D9B253032AB00A89A28 /* SyDebug.h in Headers */,
 				13493DB4253047D400A89A28 /* SyString.h in Headers */,
+				13493DE7253068F200A89A28 /* SyDefaultDir.h in Headers */,
 				13493DAB25303E1400A89A28 /* syutil-Prefix.pch in Headers */,
 				13493D8725302F1200A89A28 /* SyDef.h in Headers */,
 				13493DA3253033C900A89A28 /* SyOSAtomicT.h in Headers */,
@@ -233,6 +255,7 @@
 				13493DCD2530516F00A89A28 /* timer_internal.h in Headers */,
 				13493DC7253050BF00A89A28 /* SyEventQueueBase.h in Headers */,
 				13493DC32530505700A89A28 /* SyUtilClasses.h in Headers */,
+				13493DE12530684200A89A28 /* SyConfigIO.h in Headers */,
 				13493D782530050900A89A28 /* SyMemPool.h in Headers */,
 				13493D8A25302F1200A89A28 /* SyDataType.h in Headers */,
 				13493D8625302F1200A89A28 /* ProcessUtils.h in Headers */,
@@ -324,17 +347,22 @@
 			files = (
 				13493DD0253051EE00A89A28 /* SyTimerWrapperID.cpp in Sources */,
 				13493D7A2530050900A89A28 /* SyTextFormator.cpp in Sources */,
+				13493DE02530684200A89A28 /* SyConfigIO.cpp in Sources */,
+				13493DE6253068F200A89A28 /* SyDefaultDir.cpp in Sources */,
 				13493DCA2530513600A89A28 /* timer.cpp in Sources */,
 				13493D9F253032FB00A89A28 /* SyAtomicOperationT.cpp in Sources */,
 				13493D98253032AB00A89A28 /* SyThread.cpp in Sources */,
 				13493DC6253050BF00A89A28 /* SyEventQueueBase.cpp in Sources */,
 				13493D7B2530050900A89A28 /* SyMemPool.cpp in Sources */,
+				13493DDB2530670600A89A28 /* SyThreadInterface.cpp in Sources */,
 				13493D912530322700A89A28 /* SyThreadMisc.cpp in Sources */,
 				13493DBD253048A300A89A28 /* SyUtilMisc.cpp in Sources */,
+				13493DE32530687A00A89A28 /* SyMacUtil.mm in Sources */,
 				13493DB82530482600A89A28 /* SyConditionVariable.cpp in Sources */,
+				13493DD92530669300A89A28 /* SyTimeValue.cpp in Sources */,
 				13493DD42530631D00A89A28 /* SystemCapacity.cpp in Sources */,
 				13493DA0253032FB00A89A28 /* SyMutex.cpp in Sources */,
-				13493DD72530657600A89A28 /* SyMacUtil.mm in Sources */,
+				13493DDD253067C700A89A28 /* SyDebug.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
